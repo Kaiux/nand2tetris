@@ -14,24 +14,24 @@
 @i
 M=1             // i = 0
 @result
-M=0            // result = 0
-(LOOP)
-@i
-D=M             // D = i
-@R1
-D=D-M           // D = i - M[R1]
-@END            // A = &END
-D;JGT
-@R0
-D=M             // D = M[R0]
-@result
-M=D+M           // result += M[R0]
-@i
-M=M+1           // i++
+M=0             // result = 0
+    (LOOP)
+    @i
+    D=M             // D = i
+    @R1
+    D=D-M           // D = i - M[R1]
+    @END            // A = &END
+    D;JGT
+    @R0
+    D=M             // D = M[R0]
+    @result
+    M=D+M           // result += M[R0]
+    @i
+    M=M+1           // i++
 @LOOP
 0;JMP
-(END)
-@result
-D=M
-@R2
-M=D
+    (END)
+    @result
+    D=M
+    @R2
+    M=D
