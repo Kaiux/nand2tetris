@@ -12,7 +12,7 @@
 // Put your code here.
 
 @i
-M=1             // i = 0
+M=1             // i = 1
 @result
 M=0             // result = 0
     (LOOP)
